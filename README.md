@@ -1,4 +1,0 @@
-jrl
-===
-
-Jagath Robotics
