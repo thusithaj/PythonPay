@@ -101,6 +101,7 @@
             this.cbAccounts.Name = "cbAccounts";
             this.cbAccounts.Size = new System.Drawing.Size(215, 21);
             this.cbAccounts.TabIndex = 6;
+            this.cbAccounts.SelectedIndexChanged += new System.EventHandler(this.cbAccounts_SelectedIndexChanged);
             // 
             // lAccounts
             // 

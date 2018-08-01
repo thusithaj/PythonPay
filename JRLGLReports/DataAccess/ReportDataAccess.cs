@@ -82,7 +82,7 @@ namespace DataAccess
             sqlcmd = new SqlCommand();
             SetSqlConnection();
             sqlcmd = cmd;
-            sqlcmd.CommandText = sql;
+            
             sqlcmd.Connection = sqlcon;
             
             SqlDataAdapter sqlda = new SqlDataAdapter(sqlcmd);
@@ -97,7 +97,7 @@ namespace DataAccess
             sqlcmd = new SqlCommand();
             sqlcmd = cmd;
             SetSqlConnection();
-            sqlcmd.CommandText = sql;
+            //sqlcmd.CommandText = sql;
             sqlcmd.Connection = sqlcon;
             
             sqlcmd.ExecuteNonQuery();

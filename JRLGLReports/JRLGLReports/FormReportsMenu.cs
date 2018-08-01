@@ -63,5 +63,56 @@ namespace JRLGLReports
             glpf.WindowState = FormWindowState.Maximized;
             glpf.Show();
         }
+
+        private void hierachyOfAccountsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportConfigurator rcf = new ReportConfigurator();
+            rcf.MdiParent = this;
+            rcf.WindowState = FormWindowState.Maximized;
+            rcf.Show();
+            
+        }
+
+        private void tileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void tileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void arrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.ArrangeIcons);
+        }
+
+        private void profitLossToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IncomeStatementForm isf = new IncomeStatementForm();
+            isf.MdiParent = this;
+            isf.WindowState = FormWindowState.Maximized;
+            isf.Show();
+        }
+
+        private void balanceSheetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BalanceSheetForm bsf = new BalanceSheetForm();
+            bsf.MdiParent = this;
+            bsf.WindowState = FormWindowState.Maximized;
+            bsf.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 abt = new AboutBox1();
+            abt.ShowDialog();
+        }
     }
 }

@@ -16,14 +16,14 @@ namespace JRLGLReports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class BalanceSheet : ReportClass {
+    public class BalanceSheetComparison : ReportClass {
         
-        public BalanceSheet() {
+        public BalanceSheetComparison() {
         }
         
         public override string ResourceName {
             get {
-                return "BalanceSheet.rpt";
+                return "BalanceSheetComparison.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace JRLGLReports {
         
         public override string FullResourceName {
             get {
-                return "JRLGLReports.BalanceSheet.rpt";
+                return "JRLGLReports.BalanceSheetComparison.rpt";
             }
             set {
                 // Do nothing
@@ -234,9 +234,9 @@ namespace JRLGLReports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedBalanceSheet : Component, ICachedReport {
+    public class CachedBalanceSheetComparison : Component, ICachedReport {
         
-        public CachedBalanceSheet() {
+        public CachedBalanceSheetComparison() {
         }
         
         [Browsable(false)]
@@ -273,7 +273,7 @@ namespace JRLGLReports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            BalanceSheet rpt = new BalanceSheet();
+            BalanceSheetComparison rpt = new BalanceSheetComparison();
             rpt.Site = this.Site;
             return rpt;
         }

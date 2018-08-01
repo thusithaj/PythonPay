@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JRLGLReports")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Reporting Module for General Ledger")]
+[assembly: AssemblyDescription("This Assembly will enable displaying, viewing, exporting and creating custom report.\n The application uses Crystal Reports Version 13.00.23 and enabled the unicode supporting. \n")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Jagath Robotics (Pvt) Ltd")]
 [assembly: AssemblyProduct("JRLGLReports")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright ©  2018 by JRL, Crystal Reports SAP SE")]
+[assembly: AssemblyTrademark("JRLGL")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

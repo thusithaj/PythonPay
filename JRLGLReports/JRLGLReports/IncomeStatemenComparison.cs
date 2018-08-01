@@ -16,14 +16,14 @@ namespace JRLGLReports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class BalanceSheet : ReportClass {
+    public class IncomeStatemenComparison : ReportClass {
         
-        public BalanceSheet() {
+        public IncomeStatemenComparison() {
         }
         
         public override string ResourceName {
             get {
-                return "BalanceSheet.rpt";
+                return "IncomeStatemenComparison.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace JRLGLReports {
         
         public override string FullResourceName {
             get {
-                return "JRLGLReports.BalanceSheet.rpt";
+                return "JRLGLReports.IncomeStatemenComparison.rpt";
             }
             set {
                 // Do nothing
@@ -199,44 +199,12 @@ namespace JRLGLReports {
                 return this.DataDefinition.ParameterFields[9];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_PreviouseYear {
-            get {
-                return this.DataDefinition.ParameterFields[10];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_PreviousePeriod {
-            get {
-                return this.DataDefinition.ParameterFields[11];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_CurrentYear {
-            get {
-                return this.DataDefinition.ParameterFields[12];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_CurrentPeriod {
-            get {
-                return this.DataDefinition.ParameterFields[13];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedBalanceSheet : Component, ICachedReport {
+    public class CachedIncomeStatemenComparison : Component, ICachedReport {
         
-        public CachedBalanceSheet() {
+        public CachedIncomeStatemenComparison() {
         }
         
         [Browsable(false)]
@@ -273,7 +241,7 @@ namespace JRLGLReports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            BalanceSheet rpt = new BalanceSheet();
+            IncomeStatemenComparison rpt = new IncomeStatemenComparison();
             rpt.Site = this.Site;
             return rpt;
         }
