@@ -45,6 +45,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cashflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@
             this.toolStripMenuItemTB,
             this.ledgerReportsToolStripMenuItem,
             this.balanceSheetToolStripMenuItem,
-            this.profitLossToolStripMenuItem});
+            this.profitLossToolStripMenuItem,
+            this.cashflowToolStripMenuItem});
             this.trialBalanceToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("trialBalanceToolStripMenuItem.Image")));
             this.trialBalanceToolStripMenuItem.Name = "trialBalanceToolStripMenuItem";
             this.trialBalanceToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
@@ -175,7 +177,7 @@
             // 
             this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -183,8 +185,16 @@
             // 
             this.viewHelpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewHelpToolStripMenuItem.Image")));
             this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
-            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.viewHelpToolStripMenuItem.Text = "View Help";
+            // 
+            // cashflowToolStripMenuItem
+            // 
+            this.cashflowToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cashflowToolStripMenuItem.Image")));
+            this.cashflowToolStripMenuItem.Name = "cashflowToolStripMenuItem";
+            this.cashflowToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.cashflowToolStripMenuItem.Text = "Cashflow";
+            this.cashflowToolStripMenuItem.Click += new System.EventHandler(this.cashflowToolStripMenuItem_Click);
             // 
             // formReports
             // 
@@ -223,6 +233,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cashflowToolStripMenuItem;
     }
 }
 

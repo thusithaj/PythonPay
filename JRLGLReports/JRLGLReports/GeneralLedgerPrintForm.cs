@@ -27,10 +27,12 @@ namespace JRLGLReports
         private const string ASATDATE = "AsAtDate";
         ReportDocument report;
         private string accountCode = "%";
+        private string accountCode2 = "%";
         private string accountGroup;
         private string reportHeading;
         DataTable dtAS;
         DataTable dtAcc;
+        DataTable dtAcc2;
         DataTable dtRepo;
         public GeneralLedgerPrintForm()
         {
@@ -65,9 +67,14 @@ namespace JRLGLReports
             dtAcc.DefaultView.Sort = "ACC-ACCODE";
             dtAcc = dtAcc.DefaultView.ToTable();
             cbAccounts.DataSource = dtAcc;
+            dtAcc2 = new DataTable();
+            dtAcc2 = dtAcc.Copy();
             cbAccounts.DisplayMember = "ACC-DESC";
             cbAccounts.ValueMember = "ACC-ACCODE";
             cbAccounts.SelectedIndex = 0;
+            cbToAccounts.DataSource = dtAcc2;
+            cbToAccounts.DisplayMember = "ACC-DESC";
+            cbToAccounts.ValueMember = "ACC-ACCODE";
             dtRepo = new DataTable();
             dtRepo.Columns.Add(new DataColumn("id", typeof(int)));
             dtRepo.Columns.Add(new DataColumn("ReportName", typeof(string)));
@@ -118,12 +125,12 @@ namespace JRLGLReports
                 crglView.ReuseParameterValuesOnRefresh = true;
 
                 SqlCommand cmd = new SqlCommand();
-                string sql = SPName +" @AccountCode, @AccountGroup,@finyear,@finperiod, @Company";
+                string sql = SPName +" @AccountCode, @AccountCode2, @AccountGroup,@finyear,@finperiod, @Company";
                 cmd.CommandText = sql;
                 cmd.Parameters.Add(new SqlParameter("@AccountCode", SqlDbType.NVarChar)).Value = accountCode;
+                cmd.Parameters.Add(new SqlParameter("@AccountCode2", SqlDbType.NVarChar)).Value = accountCode2;
                 cmd.Parameters.Add(new SqlParameter("@AccountGroup", SqlDbType.NVarChar)).Value = accountGroup;
                 cmd.Parameters.Add(new SqlParameter("@finyear", SqlDbType.Int)).Value = dtPeriod.Value.Year;
-
                 cmd.Parameters.Add(new SqlParameter("@finperiod", SqlDbType.Int)).Value = dtPeriod.Value.Month - 2;
                 cmd.Parameters.Add(new SqlParameter("@Company", SqlDbType.NVarChar)).Value = ConnectionInfo.companyCode;
 
@@ -181,12 +188,22 @@ namespace JRLGLReports
                     filterAcc.Rows[filterAcc.Rows.Count - 1]["ACC-DESC"] = "(All)";
                     filterAcc.DefaultView.Sort = "ACC-ACCODE";
                     filterAcc = filterAcc.DefaultView.ToTable();
+                    DataTable filterAcc2 = filterAcc.Copy();
                     cbAccounts.DataSource = null;
                     cbAccounts.Refresh();
                     cbAccounts.DataSource = filterAcc;
                     cbAccounts.DisplayMember = "ACC-DESC";
                     cbAccounts.ValueMember = "ACC-ACCODE";
+                    cbToAccounts.DataSource = filterAcc2;
+                    cbToAccounts.DisplayMember = "ACC-DESC";
+                    cbToAccounts.ValueMember = "ACC-ACCODE";
+                    
+                    if (accountGroup == "CB")
+                        cbReport.SelectedIndex = 0;
+                    else
+                        cbReport.SelectedIndex = 1;
                     accountGroup = accountGroup + "%";
+                    
                 }
                 else
                     accountGroup =  "%";
@@ -214,9 +231,23 @@ namespace JRLGLReports
                 accountCode = dv["ACC-ACCODE"].ToString();
                 if (accountCode == "0")
                     accountCode = "%";
-                else
-                    accountCode = accountCode + "%";
+                //else
+                //    accountCode = accountCode + "%";
             }
+        }
+
+        private void cbToAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbToAccounts.SelectedItem != null)
+            {
+                DataRowView dv = (DataRowView)cbToAccounts.SelectedItem;
+                accountCode2 = dv["ACC-ACCODE"].ToString();
+                if (accountCode2 == "0")
+                    accountCode2 = "%";
+                //else
+                //    accountCode2 =  "%";
+            }
+
         }
     }
 }

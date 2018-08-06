@@ -118,6 +118,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CashFlow.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CashFlowStatementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashFlowStatementForm.Designer.cs">
+      <DependentUpon>CashFlowStatementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IncomeStatemenComparison.cs">
       <DependentUpon>IncomeStatemenComparison.rpt</DependentUpon>
@@ -242,9 +249,13 @@
       <LastGenOutput>IncomeStatemenComparison.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <EmbeddedResource Include="CashFlow.rpt">
+    <None Include="CashFlow.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CashFlow.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="CashFlowStatementForm.resx">
+      <DependentUpon>CashFlowStatementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncomeStatementForm.resx">
       <DependentUpon>IncomeStatementForm.cs</DependentUpon>
@@ -257,7 +268,6 @@
     <EmbeddedResource Include="ReportConfigurator.resx">
       <DependentUpon>ReportConfigurator.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="JRLGLReports_TemporaryKey.pfx" />
     <None Include="TrialBalancewithZero.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TrialBalancewithZero.cs</LastGenOutput>

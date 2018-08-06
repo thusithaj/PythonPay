@@ -49,7 +49,7 @@ namespace JRLGLReports
             dtrpt.Rows[0][1] = "IncomeStatement.rpt";
             dtrpt.Rows.Add(dtrpt.NewRow());
             dtrpt.Rows[1][0] = "Comparison Income Statement";
-            dtrpt.Rows[1][1] = "IncomeStatementComparison.rpt";
+            dtrpt.Rows[1][1] = "IncomeStatemenComparison.rpt";
             cbReport.DataSource = dtrpt;
             cbReport.DisplayMember = "ReportName";
             cbReport.ValueMember = "ReportFile";
@@ -133,9 +133,35 @@ namespace JRLGLReports
         private void cbComparison_CheckedChanged(object sender, EventArgs e)
         {
             if (cbComparison.Checked)
+            {
                 dtPrePeriod.Visible = true;
+                dtPrePeriod.Value = dtPeriod.Value.AddMonths(-1);
+                cbReport.SelectedIndex = 1;
+            }
             else
+            {
                 dtPrePeriod.Visible = false;
+                cbReport.SelectedIndex = 0;
+            }
+        }
+
+        private void dtPeriod_ValueChanged(object sender, EventArgs e)
+        {
+            dtPrePeriod.Value = dtPeriod.Value.AddMonths(-1);
+        }
+
+        private void cbReport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbReport.SelectedIndex)
+            {
+                case 0:
+                    cbComparison.Checked = false;
+                    break;
+                case 1:
+                    cbComparison.Checked = true;
+                    break;
+            }
+            
         }
     }
 }

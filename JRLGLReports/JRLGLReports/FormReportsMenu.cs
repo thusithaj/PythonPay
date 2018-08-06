@@ -114,5 +114,13 @@ namespace JRLGLReports
             AboutBox1 abt = new AboutBox1();
             abt.ShowDialog();
         }
+
+        private void cashflowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CashFlowStatementForm cfs = new CashFlowStatementForm();
+            cfs.MdiParent = this;
+            cfs.WindowState = FormWindowState.Maximized;
+            cfs.Show();
+        }
     }
 }

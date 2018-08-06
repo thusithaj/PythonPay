@@ -62,10 +62,14 @@
   <ItemGroup>
     <Compile Include="Acc_Report.cs" />
     <Compile Include="Acc_Report_CRUD.cs" />
+    <Compile Include="GLReportsMenu.cs" />
+    <Compile Include="GLReportSubMenu.cs" />
+    <Compile Include="MenuLanguage.cs" />
     <Compile Include="ReportDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportFormat.cs" />
     <Compile Include="ReportFormatDetail.cs" />
+    <Compile Include="ReportMenuController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

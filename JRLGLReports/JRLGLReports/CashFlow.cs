@@ -106,7 +106,7 @@ namespace JRLGLReports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_AccountCode {
+        public CrystalDecisions.Shared.IParameterField Parameter_finfyear {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -114,7 +114,7 @@ namespace JRLGLReports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_AccountGroup {
+        public CrystalDecisions.Shared.IParameterField Parameter_finperiod {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
@@ -122,7 +122,7 @@ namespace JRLGLReports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_finfyear {
+        public CrystalDecisions.Shared.IParameterField Parameter_company {
             get {
                 return this.DataDefinition.ParameterFields[2];
             }
@@ -130,7 +130,7 @@ namespace JRLGLReports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_finperiod {
+        public CrystalDecisions.Shared.IParameterField Parameter_CompanyName {
             get {
                 return this.DataDefinition.ParameterFields[3];
             }
@@ -138,7 +138,7 @@ namespace JRLGLReports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_company {
+        public CrystalDecisions.Shared.IParameterField Parameter_SelectedDate {
             get {
                 return this.DataDefinition.ParameterFields[4];
             }
