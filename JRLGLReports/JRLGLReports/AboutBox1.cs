@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace JRLGLReports
+namespace ReportsFormofGL
 {
     partial class AboutBox1 : Form
     {

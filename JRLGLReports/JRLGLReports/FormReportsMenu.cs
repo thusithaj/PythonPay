@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Configuration;
+using System.IO;
 using DataAccess;
 
-namespace JRLGLReports
+namespace ReportsFormofGL
 {
     public partial class formReports : Form
     {
-       
+        private List<GLReportsMenu> reportMenuList;
+        private int lngIndex = 1;
         public formReports()
         {
             InitializeComponent();
@@ -24,11 +26,94 @@ namespace JRLGLReports
         private void Form1_Load(object sender, EventArgs e)
         {
             SanitizeConnection();
+            lngIndex = ConnectionInfo.Language;
+            CreateUserMenu();
+        }
+
+        private void CreateUserMenu()
+        {
+            reportMenuList = new ReportMenuController().menuList.ToList();
+            int preitm = 0;
+            ToolStripMenuItem topmenu = new ToolStripMenuItem();
+            foreach ( GLReportsMenu menu in reportMenuList)
+            {
+                
+                if (menu.MenuLevel == 0 && preitm >= 0)
+                {
+                    
+                    topmenu = new ToolStripMenuItem();
+                    topmenu.Name = menu.DefaultMenuName;
+                    if (menu.MenuLanguages.ToList().Count >= 1)
+                        topmenu.Text = menu.MenuLanguages.ToList()[lngIndex].MenuName;
+                    this.reportsMenu.Items.Add(topmenu);
+                    preitm++;
+                   
+                }
+                else
+                {
+                    ToolStripMenuItem itm = new ToolStripMenuItem();
+                    itm.Name = menu.DefaultMenuName;
+                    itm.Text = menu.MenuLanguages.ToList()[lngIndex].MenuName;
+                    itm.Click += Itm_Click;
+                    topmenu.DropDownItems.Add(itm);
+                }
+            }
+            //throw new NotImplementedException();
+        }
+
+        private void Itm_Click(object sender, EventArgs e)
+        {
+
+            //MessageBox.Show(sender.ToString());
+            string objectName = sender.ToString();
+            GLReportsMenu menu = reportMenuList.Where(o => o.MenuLanguages.ToList()[lngIndex].MenuName == objectName).FirstOrDefault();
+            string formName = menu.SubMenu.Where( o=>o.menuId == menu.id).FirstOrDefault().formName;
+            string dllname = menu.SubMenu.Where(o => o.menuId == menu.id).FirstOrDefault().nameofDLL;
+            //Assembly asm = null;
+            string apppath = @dllname;
+            Assembly asm = Assembly.Load(apppath);
+            Type[] typeList = asm.GetTypes();
+            Type type = typeList.Where( o=> o.Name == formName).FirstOrDefault();
+            //typeList = 
+            //Form frm = (Form) Activator.CreateInstance(type);frm.Show();
+            string[] cominfo = new string[] { ConnectionInfo.companyCode, ConnectionInfo.companyName };
+            
+            //MethodInfo mi = type.GetMethod(formName, new Type[] { typeof(string), typeof(string) });
+            
+            Assembly myAssembly = Assembly.Load(apppath);
+
+            // Set The Constructor
+            Type myType = myAssembly.GetType(formName);
+            Type[] types = new Type[2];
+            types[0] = typeof(string[]);
+            types[1] = typeof(string[]);
+            //ConstructorInfo constructorInfoObj = type.GetConstructor(
+            //    BindingFlags.Instance | BindingFlags.Public, null,
+            //    CallingConventions.HasThis, types, null);
+            ConstructorInfo constructorInfoObj = type.GetConstructor(
+                                BindingFlags.Instance | BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.OptionalParamBinding|BindingFlags.GetField,
+                                null, CallingConventions.VarArgs|CallingConventions.Standard|CallingConventions.HasThis,types,null);
+            ConstructorInfo[] cons = type.GetConstructors();
+
+            constructorInfoObj = cons[1];
+            object[] myParams = new object[] { ConnectionInfo.companyCode, ConnectionInfo.companyName };
+            // this opens the form but dosn't set the label.txtා
+            Form myForm = (Form)constructorInfoObj.Invoke(myParams);
+            myForm.MdiParent = this;
+            myForm.WindowState = FormWindowState.Maximized;
+            myForm.Show();
+
+
         }
 
         private void SanitizeConnection()
         {
             string constr = ConfigurationManager.ConnectionStrings["DBCS"].ToString();
+            string LanguageKey = ConfigurationManager.AppSettings["Language"].ToString();
+            if (LanguageKey == "")
+                ConnectionInfo.Language = 0;
+            else
+                ConnectionInfo.Language = int.Parse(LanguageKey);
             string[] values = constr.Split(';');
             ConnectionInfo.serverName = values[0].Substring(values[0].IndexOf('=') + 1, values[0].Length - ((values[0].IndexOf('=') + 1)));
             ConnectionInfo.database = values[1].Substring(values[1].IndexOf('=') + 1, values[1].Length - ((values[1].IndexOf('=') + 1)));
@@ -121,6 +206,19 @@ namespace JRLGLReports
             cfs.MdiParent = this;
             cfs.WindowState = FormWindowState.Maximized;
             cfs.Show();
+        }
+
+        private void createMenusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuCreation mcf = new MenuCreation();
+            mcf.MdiParent = this;
+            mcf.WindowState = FormWindowState.Maximized;
+            mcf.Show();
+        }
+
+        private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "JRLGLHelp.chm");
         }
     }
 }

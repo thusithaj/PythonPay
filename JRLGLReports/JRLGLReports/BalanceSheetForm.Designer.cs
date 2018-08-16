@@ -1,4 +1,4 @@
-﻿namespace JRLGLReports
+﻿namespace ReportsFormofGL
 {
     partial class BalanceSheetForm
     {

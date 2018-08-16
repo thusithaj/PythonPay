@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DataAccess;
-namespace JRLGLReports
+namespace ReportsFormofGL
 {
     public partial class ReportConfigurator : Form
     {

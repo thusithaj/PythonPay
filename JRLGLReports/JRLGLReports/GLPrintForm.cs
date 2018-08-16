@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 using CrystalDecisions.Shared;
 using DataAccess;
 
-namespace JRLGLReports
+namespace ReportsFormofGL
 {
     public partial class GLPrintForm : Form
     {
@@ -80,7 +80,7 @@ namespace JRLGLReports
             cmd.CommandText = sql;
             cmd.Parameters.Add(new SqlParameter("@finyear", SqlDbType.Int)).Value = dtPeriod.Value.Year;
 
-            cmd.Parameters.Add(new SqlParameter("@finperiod", SqlDbType.Int)).Value = dtPeriod.Value.Month;
+            cmd.Parameters.Add(new SqlParameter("@finperiod", SqlDbType.Int)).Value = dtPeriod.Value.Month - 2;
             cmd.Parameters.Add(new SqlParameter("@Company", SqlDbType.NVarChar)).Value = ConnectionInfo.companyCode;
             cmd.Parameters.Add(new SqlParameter("@zeroFlag", SqlDbType.NVarChar)).Value = zero;
             DataTable dt = new DataTable();

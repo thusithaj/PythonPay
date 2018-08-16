@@ -1,4 +1,4 @@
-﻿namespace JRLGLReports
+﻿namespace ReportsFormofGL
 {
     partial class formReports
     {
@@ -35,8 +35,10 @@
             this.ledgerReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balanceSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profitLossToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cashflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hierachyOfAccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createMenusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +47,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cashflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,10 +109,19 @@
             this.profitLossToolStripMenuItem.Text = "Profit && Loss";
             this.profitLossToolStripMenuItem.Click += new System.EventHandler(this.profitLossToolStripMenuItem_Click);
             // 
+            // cashflowToolStripMenuItem
+            // 
+            this.cashflowToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cashflowToolStripMenuItem.Image")));
+            this.cashflowToolStripMenuItem.Name = "cashflowToolStripMenuItem";
+            this.cashflowToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.cashflowToolStripMenuItem.Text = "Cashflow";
+            this.cashflowToolStripMenuItem.Click += new System.EventHandler(this.cashflowToolStripMenuItem_Click);
+            // 
             // setupToolStripMenuItem
             // 
             this.setupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hierachyOfAccountsToolStripMenuItem});
+            this.hierachyOfAccountsToolStripMenuItem,
+            this.createMenusToolStripMenuItem});
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
             this.setupToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.setupToolStripMenuItem.Text = "Setup";
@@ -124,6 +134,13 @@
             this.hierachyOfAccountsToolStripMenuItem.Text = "Hierachy of Accounts";
             this.hierachyOfAccountsToolStripMenuItem.Visible = false;
             this.hierachyOfAccountsToolStripMenuItem.Click += new System.EventHandler(this.hierachyOfAccountsToolStripMenuItem_Click);
+            // 
+            // createMenusToolStripMenuItem
+            // 
+            this.createMenusToolStripMenuItem.Name = "createMenusToolStripMenuItem";
+            this.createMenusToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.createMenusToolStripMenuItem.Text = "Create Menus";
+            this.createMenusToolStripMenuItem.Click += new System.EventHandler(this.createMenusToolStripMenuItem_Click);
             // 
             // windowToolStripMenuItem
             // 
@@ -177,7 +194,7 @@
             // 
             this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -185,16 +202,9 @@
             // 
             this.viewHelpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewHelpToolStripMenuItem.Image")));
             this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
-            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viewHelpToolStripMenuItem.Text = "View Help";
-            // 
-            // cashflowToolStripMenuItem
-            // 
-            this.cashflowToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cashflowToolStripMenuItem.Image")));
-            this.cashflowToolStripMenuItem.Name = "cashflowToolStripMenuItem";
-            this.cashflowToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.cashflowToolStripMenuItem.Text = "Cashflow";
-            this.cashflowToolStripMenuItem.Click += new System.EventHandler(this.cashflowToolStripMenuItem_Click);
+            this.viewHelpToolStripMenuItem.Click += new System.EventHandler(this.viewHelpToolStripMenuItem_Click);
             // 
             // formReports
             // 
@@ -234,6 +244,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cashflowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createMenusToolStripMenuItem;
     }
 }
 

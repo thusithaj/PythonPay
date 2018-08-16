@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JRLGLReports
+namespace ReportsFormofGL
 {
-    public static class ConnectionInfo
+    public  static  class ConnectionInfo
     {
         public static string serverName { get; set; }
         public static string userName { get; set; }
@@ -15,6 +15,6 @@ namespace JRLGLReports
         public static string companyName { get; set; }
         public static string loggedUser { get; set; }
         public static string companyCode { get; set; }
-
+        public static int Language { get; set; }
     }
 }

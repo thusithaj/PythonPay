@@ -187,17 +187,17 @@
   </data>
   <data name="cashflowToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIkSURBVDhPjZPBa9NQHMfjguywWr15kPUy8Kgnh0r/gKEg
-        qBOV4EEQN1ChB6fVwap2dW5TZyYe2q1pK3WDeRhSi4hTJg2DIVrUpu3aJuu6LlmbtiriaYeveQ+thlG6
-        B19+vxd+38/7kuQx3We6j3LnzhZPnT6JrYrMEx9DFtm8mXuNWq2yZZF54qMAQiQPv32voVrTqWQlg0q1
-        TPWv15HLpVE1KpknPhMgEPLT4UZKL0mQkp+pGgJ0vYSyvk4NZV2r95pWhKqtUrNq9A0BxJTKKviSlFAq
-        q1TJ9FcU1/IoqisUsKYWGgPED3FwN8Pocc9ASkl4v7CI6cg7xOMiZnzHMeHpwMO+7RCG96L/cgf4K4y1
-        DhCCEzjmEBCOiLj1ZBZHLnnB3QjhbUzEs8d2vHp6GKsJB35pQ7RGAp0Yd7bO1wH3RjyYjsaQL8g0qmPk
-        OWbnFpBIfEKYP4RosNMEeBk4AN7ZKpoAf9/y/yIAYXQfhLu74B/cibE+ltbJQSv4ay0xE0DJZw1lqDG3
-        nEFOWaKA0IP9iPptKHy04+dyF1aM+sK3B/x11pxANszERABZOY2MnKKA4H0jgceKSXebkaDFOL3NkMWc
-        gHwFAtmkYTfG+m2I+Ns3JXhEEjS7C5VKCd6hg/DdIQksfxJY4L29AwO9RoLmt/EErl7YjSneBnnRjh9K
-        F61T4+0brh52nv5MzZaLY6wDF9mQq5dVnOe3bZBK9xxj/Q2lJa5A6Z0OWwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAiRJREFUOE+Nk8Fr01Acx+OC7LBavXmQ9TLwqCeHSv+AoSCoE5XgQRA3UKEHp9XB
+        qnZ1blNnJh7arWkrdYN5GFKLiFMmDYMhWtSm7dom67ouWZu2KuJph695D62GUboHX36/F37fz/uS5DHd
+        Z7qPcufOFk+dPomtiswTH0MW2byZe41arbJlkXniowBCJA+/fa+hWtOpZCWDSrVM9a/XkculUTUqmSc+
+        EyAQ8tPhRkovSZCSn6kaAnS9hLK+Tg1lXav3mlaEqq1Ss2r0DQHElMoq+JKUUCqrVMn0VxTX8iiqKxSw
+        phYaA8QPcXA3w+hxz0BKSXi/sIjpyDvE4yJmfMcx4enAw77tEIb3ov9yB/grjLUOEIITOOYQEI6IuPVk
+        FkcuecHdCOFtTMSzx3a8enoYqwkHfmlDtEYCnRh3ts7XAfdGPJiOxpAvyDSqY+Q5ZucWkEh8Qpg/hGiw
+        0wR4GTgA3tkqmgB/3/L/IgBhdB+Eu7vgH9yJsT6W1slBK/hrLTETQMlnDWWoMbecQU5ZooDQg/2I+m0o
+        fLTj53IXVoz6wrcH/HXWnEA2zMREAFk5jYycooDgfSOBx4pJd5uRoMU4vc2QxZyAfAUC2aRhN8b6bYj4
+        2zcleEQSNLsLlUoJ3qGD8N0hCSx/Eljgvb0DA71Ggua38QSuXtiNKd4GedGOH0oXrVPj7RuuHnae/kzN
+        lotjrAMX2ZCrl1Wc57dtkEr3HGP9DaUlrkDpnQ5bAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="trialBalanceToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

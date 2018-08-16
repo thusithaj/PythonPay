@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JRLGLReports {
+namespace ReportsFormofGL {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;

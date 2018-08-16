@@ -11,7 +11,7 @@ using CrystalDecisions.CrystalReports.Engine;
 using DataAccess;
 using System.Data.SqlClient;
 
-namespace JRLGLReports
+namespace ReportsFormofGL
 {
     public partial class CashFlowStatementForm : Form
     {

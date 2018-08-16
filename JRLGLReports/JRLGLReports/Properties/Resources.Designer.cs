@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JRLGLReports.Properties
+namespace ReportsFormofGL.Properties
 {
 
 

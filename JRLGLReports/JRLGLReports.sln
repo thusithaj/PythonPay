@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JRLGLReports", "JRLGLReport
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{256A9158-68E7-4971-96B1-59D6C87CCDDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportsFormofGL", "ReportsFormofGL\ReportsFormofGL.csproj", "{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{256A9158-68E7-4971-96B1-59D6C87CCDDE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{256A9158-68E7-4971-96B1-59D6C87CCDDE}.Release|x86.ActiveCfg = Release|x86
 		{256A9158-68E7-4971-96B1-59D6C87CCDDE}.Release|x86.Build.0 = Release|x86
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Debug|x86.Build.0 = Debug|Any CPU
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Release|x86.ActiveCfg = Release|Any CPU
+		{05EA0F3E-509C-4175-B4D5-D9F48BB4A24E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
